@@ -1,0 +1,23 @@
+# Virtual environment
+venv/
+
+# Bytecode
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Data/model/image output
+*.jpg
+*.png
+*.h5
+*.npy
+*.npz
+
+# Logs and temp
+*.log
+*.tmp
