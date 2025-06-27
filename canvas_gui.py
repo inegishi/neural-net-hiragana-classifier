@@ -3,13 +3,28 @@ from PIL import Image, ImageDraw, ImageOps
 import numpy as np
 import tensorflow as tf
 
-num_to_hira = {0: "A", 1 :"I", 2: "U"}
+num_to_hira = {
+    0: "あ", 1: "い", 2: "う", 3: "え", 4: "お",
+    5: "か", 6: "き", 7: "く", 8: "け", 9: "こ",
+    10: "さ", 11: "し", 12: "す", 13: "せ", 14: "そ",
+    15: "た", 16: "ち", 17: "つ", 18: "て", 19: "と",
+    20: "な", 21: "に", 22: "ぬ", 23: "ね", 24: "の",
+    25: "は", 26: "ひ", 27: "ふ", 28: "へ", 29: "ほ",
+    30: "ま", 31: "み", 32: "む", 33: "め", 34: "も",
+    35: "や", 36: "ゆ", 37: "よ",
+    38: "ら", 39: "り", 40: "る", 41: "れ", 42: "ろ",
+    43: "わ", 44: "を", 45: "ん",
+    46: "が", 47: "ぎ", 48: "ぐ", 49: "げ", 50: "ご",
+    51: "ざ", 52: "じ", 53: "ず", 54: "ぜ", 55: "ぞ",
+    56: "だ", 57: "で", 58: "ど",
+    59: "ば", 60: "び", 61: "ぶ", 62: "べ", 63: "ぼ",
+    64: "ぱ", 65: "ぴ", 66: "ぷ", 67: "ぺ", 68: "ぽ"
+}
 
 # Load model
 model = tf.keras.models.load_model("hiragana.keras")
 
-# Canvas size (you draw in 280x280, then resize to 83x84)
-CANVAS_SIZE = 280
+CANVAS_SIZE = 180
 IMG_WIDTH, IMG_HEIGHT = 83, 84
 
 class HiraganaApp:
@@ -36,7 +51,7 @@ class HiraganaApp:
 
     def paint(self, event):
         x, y = event.x, event.y
-        r = 5
+        r = 2
         self.canvas.create_oval(x - r, y - r, x + r, y + r, fill="black")
         self.draw.ellipse([x - r, y - r, x + r, y + r], fill=0)
 
