@@ -12,7 +12,6 @@ __pycache__/
 .vscode/
 
 # Data/model/image output
-*.jpg
 *.png
 *.h5
 *.npy
