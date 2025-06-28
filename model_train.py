@@ -36,7 +36,7 @@ def get_features():
         Y (np.array): Shape (60,) 
     """
 
-    folder_path = "hiragana_images"
+    folder_path = "testimg"
     X_list = []
     Y_list = []
     for filename in os.listdir(folder_path):
@@ -70,7 +70,7 @@ def init_model(X,Y):
     tf.keras.layers.MaxPooling2D((2,2)),
     tf.keras.layers.Flatten(),
     tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dense(69, activation='softmax')
+    tf.keras.layers.Dense(5, activation='softmax')
 ])
     model.compile(
     loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False),

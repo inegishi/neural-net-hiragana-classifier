@@ -24,7 +24,7 @@ num_to_hira = {
 # Load model
 model = tf.keras.models.load_model("hiragana.keras")
 
-CANVAS_SIZE = 180
+CANVAS_SIZE = 280
 IMG_WIDTH, IMG_HEIGHT = 83, 84
 
 class HiraganaApp:
@@ -51,7 +51,7 @@ class HiraganaApp:
 
     def paint(self, event):
         x, y = event.x, event.y
-        r = 2
+        r = 4
         self.canvas.create_oval(x - r, y - r, x + r, y + r, fill="black")
         self.draw.ellipse([x - r, y - r, x + r, y + r], fill=0)
 
@@ -63,7 +63,7 @@ class HiraganaApp:
         img_resized.save("test.png")
         prediction = model.predict(img_array)
         yhat = np.argmax(tf.nn.softmax(prediction))
-        self.result_label.config(text=f"Predicted Class: {num_to_hira[yhat]}")
+        self.result_label.config(text=f"Predicted Char: {num_to_hira[yhat]}")
 
     def clear(self):
         self.canvas.delete("all")
