@@ -14,7 +14,8 @@ Draw Hiragana characters using a Tkinter-based canvas, and the trained model wil
 
 The user can draw on a 280x280 pixel canvas. The image is resized and passed to a trained model for prediction.
 
-![demo screenshot or gif here if available]
+![image](https://github.com/user-attachments/assets/c5836e9e-ee17-4685-81ce-df9ce3986534)
+![image](https://github.com/user-attachments/assets/d19b86e5-383e-46e2-9101-24c83ad6b7d4)
 
 ## 🚀 Getting Started
 
