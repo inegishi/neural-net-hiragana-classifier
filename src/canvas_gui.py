@@ -22,7 +22,7 @@ num_to_hira = {
 }
 
 # Load model
-model = tf.keras.models.load_model("hiragana.keras")
+model = tf.keras.models.load_model("models/hiragana.keras")
 
 CANVAS_SIZE = 280
 IMG_WIDTH, IMG_HEIGHT = 83, 84

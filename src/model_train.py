@@ -122,7 +122,7 @@ def save_model(model):
     Args:   
         model: logistic regression model
     """
-    model.save('hiragana.keras')
+    model.save('models/hiragana.keras')
 
 
 X,Y = get_features()

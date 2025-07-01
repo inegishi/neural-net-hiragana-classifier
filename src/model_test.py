@@ -13,7 +13,7 @@ hira_to_num = {"A": 0, "I" :1, "U":2}
 X_list = []
 
 #load pre-trained model
-model = tf.keras.models.load_model("hiragana.keras")
+model = tf.keras.models.load_model("models/hiragana.keras")
 
 img2 = Image.open(r"C:\Users\inegi_pqetia\Documents\CS Projects\neural-net-hiragana classifier\testimg\kanaU15.jpg")
 img_array = np.array(img2).flatten()
