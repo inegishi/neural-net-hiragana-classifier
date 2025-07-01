@@ -8,7 +8,7 @@ Draw Hiragana characters using a Tkinter-based canvas, and the trained model wil
 - Custom neural network built using TensorFlow/Keras
 - Simple drawing interface using `tkinter`
 - Real-time prediction of hand-drawn Hiragana
-- Supports basic characters (e.g. あ, い, う...)
+- Supports basic characters (e.g. あ, い, う, え, お)
 
 ## 🖼️ Interface
 
